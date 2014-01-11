@@ -52,3 +52,4 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 gem 'capistrano', '2.12.0'
 gem 'uberspacify'
 gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-1-stable'
+gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-1-stable'

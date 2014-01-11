@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111165825) do
+ActiveRecord::Schema.define(version: 20140111192244) do
 
   create_table "spree_activator_translations", force: true do |t|
     t.integer  "spree_activator_id"
