@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/pampie/spree_bank_transfer.git
+  revision: 6f64bfca9681e6230a42040b91dd26e7ccbf5f5f
+  branch: 2-1-stable
+  specs:
+    spree_bank_transfer (2.1.3)
+      spree_core (~> 2.1.3)
+
+GIT
   remote: git://github.com/radar/better_spree_paypal_express.git
   revision: 104dda73d6f175ac45eb3db9930833f345d32218
   branch: 2-1-stable
@@ -376,6 +384,7 @@ DEPENDENCIES
   sdoc
   spree!
   spree_auth_devise!
+  spree_bank_transfer!
   spree_fancy!
   spree_gateway!
   spree_i18n!

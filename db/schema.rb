@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113012012) do
+ActiveRecord::Schema.define(version: 20140114232911) do
 
   create_table "spree_activator_translations", force: true do |t|
     t.integer  "spree_activator_id"
@@ -99,6 +99,17 @@ ActiveRecord::Schema.define(version: 20140113012012) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_banks", force: true do |t|
+    t.string   "name"
+    t.string   "account_no"
+    t.boolean  "active",     default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_banks", ["active"], name: "index_spree_banks_on_active"
+  add_index "spree_banks", ["name", "account_no"], name: "index_spree_banks_on_name_and_account_no", unique: true
 
   create_table "spree_calculators", force: true do |t|
     t.string   "type"

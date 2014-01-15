@@ -13,3 +13,4 @@
 //= require admin/spree_fancy
 //= require admin/spree_paypal_express
 //= require admin/spree_i18n
+//= require admin/spree_bank_transfer
