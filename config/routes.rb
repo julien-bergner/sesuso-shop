@@ -60,4 +60,6 @@ AvitallShop::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  post '/paypal', :to => "paypal#express", :as => :paypal_express
 end
