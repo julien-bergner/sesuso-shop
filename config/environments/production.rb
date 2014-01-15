@@ -60,6 +60,9 @@ AvitallShop::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
+  config.assets.precompile += %w( store/print.css )
+  config.assets.precompile += %w( icons.svg icons.ttf icons.eot icons.woff )
+  config.assets.precompile += %w( images/bx_loader.gif images/controls.png )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
