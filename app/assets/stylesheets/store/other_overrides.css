@@ -3,11 +3,11 @@ color: #d3770a;
 }
 
 body {
- background-color: #faf0e6;
-  color: #000000;
+ background-color: #faf0e6 !important;
+  color: #faf0e6 !important;
 }
 
 .av-index-h3 {
-background-color: #faf0e6 important;
+background-color: #faf0e6 !important;
 }
 

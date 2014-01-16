@@ -15,6 +15,7 @@ $link_text_color: #d3770a;
     -ms-border-radius: 0px !important;
     -o-border-radius: 0px !important;
     border-radius: 0px !important;
+    background-color: #faf0e6 !important;
     
     img {
       -webkit-border-radius: 0px !important;
@@ -24,4 +25,8 @@ $link_text_color: #d3770a;
       border-radius: 0px !important;
     }
   }
+}
+
+#subheader {
+   color: #faf0e6 !important;
 }
