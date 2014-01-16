@@ -3,7 +3,7 @@ $c_red: #e45353;
 $c_blue: #000000;
 $c_orange: #d3770a;
 
-$layout_background_color: #000000;
+$layout_background_color: #faf0e6;
 $title_text_color: #d3770a;
 $body_text_color: #d3770a;
 $link_text_color: #d3770a;
@@ -27,6 +27,13 @@ $link_text_color: #d3770a;
   }
 }
 
-#subheader {
-   color: #faf0e6 !important;
+
+
+.product-info, .product-title {
+   //color: #faf0e6 !important;
+   color: $layout_background_color !important;
+}
+
+#variants_1, #add-to-cart-button {
+    background-color: $layout_background_color !important;
 }
