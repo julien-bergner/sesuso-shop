@@ -29,11 +29,11 @@ $link_text_color: #d3770a;
 
 
 
-.product-info, .product-title {
+.slider-product-info, .slider-product-title {
    //color: #faf0e6 !important;
    color: $layout_background_color !important;
 }
 
-#variants_1, #add-to-cart-button {
+.slider-number-field, .slider-add-to-cart-button {
     background-color: $layout_background_color !important;
 }
