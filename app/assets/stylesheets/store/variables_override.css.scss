@@ -30,8 +30,6 @@ $link_text_color: #d3770a;
   }
 }
 
-
-
 .slider-product-info, .slider-product-title {
   color: $layout_background_color !important;
 }
@@ -44,6 +42,11 @@ $link_text_color: #d3770a;
   background-color: $foreground_color !important;
   border-color: lighten($foreground_color, 30) !important;
   color: $background_color !important;
+}
+
+#main-image, #main-image img {
+  border-radius: 0px !important;
+  background-color: $layout_background_color !important;
 }
 
 a {
