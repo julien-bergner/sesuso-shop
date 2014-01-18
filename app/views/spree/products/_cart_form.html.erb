@@ -28,7 +28,7 @@
         <div id="product-price">
           <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
           <div>
-            <span class="price selling" itemprop="price">
+            <span class="price selling text-color" itemprop="price">
               <%= display_price(@product) %>
             </span>
             <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
@@ -41,8 +41,8 @@
 
         <div class="add-to-cart">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
-            1, :class => 'title', :style => 'width: 100px;', :min => 1 %>
-          <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
+            1, :class => 'title show-product-number-field', :style => 'width: 100px;', :min => 1 %>
+          <%= button_tag :class => 'large primary show-product-add-to-cart-button', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
         </div>

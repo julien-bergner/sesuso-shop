@@ -1,3 +1,6 @@
+$foreground_color: #d3770a;
+$background_color: #faf0e6;
+
 $c_green: #d3770a;
 $c_red: #e45353;
 $c_blue: #d3770a;
@@ -35,6 +38,12 @@ $link_text_color: #d3770a;
 
 .slider-number-field, .slider-add-to-cart-button {
   background-color: $layout_background_color !important;
+}
+
+.show-product-number-field, .show-product-add-to-cart-button {
+  background-color: $foreground_color !important;
+  border-color: lighten($foreground_color, 30) !important;
+  color: $background_color !important;
 }
 
 a {
