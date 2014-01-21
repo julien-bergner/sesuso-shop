@@ -43,7 +43,7 @@ $link_text_color: #d3770a;
 
 .slider-number-field, .slider-add-to-cart-button {
   background-color: $background_color !important;
-  border-color: darken($foreground_color, 30) !important;
+  border-color: lighten($foreground_color, 30) !important;
   color: $foreground_color !important;
 }
 
@@ -87,7 +87,7 @@ body {
   color: #d3770a !important;
 }
 
-.price {
+.price,.cart-item-price, #subtotal {
   color: $foreground_color !important;
 }
 
