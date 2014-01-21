@@ -68,6 +68,15 @@ body {
   color: #d3770a !important;
 }
 
+#products .product-image {
+  min-height: 170px !important;
+}
+
+#products .product-image a {
+  padding: 0px !important;
+  min-height: inherit !important;
+}
+
 #featured-products .product-image a {
   border-color: inherit !important;
 }
@@ -77,7 +86,6 @@ body {
 }
 
 .price, .subtaxon-title {
-  background-color: $foreground_color !important;
   color: $foreground_color !important;
 }
 
