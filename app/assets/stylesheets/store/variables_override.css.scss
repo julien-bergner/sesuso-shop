@@ -111,3 +111,7 @@ p.field {
   background-color: lighten($foreground_color, 30) !important;
 }
 
+.ui-button-text:hover {
+  border-color: $foreground_color !important;
+}
+
