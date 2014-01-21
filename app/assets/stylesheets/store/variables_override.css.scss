@@ -12,6 +12,7 @@ $body_text_color: #d3770a;
 $link_text_color: #d3770a;
 
 .product-image {
+  background-color: #faf0e6 !important;
   a {
     -webkit-border-radius: 0px !important;
     -moz-border-radius: 0px !important;
@@ -69,4 +70,8 @@ body {
 
 .text-color {
   color: #d3770a !important;
+}
+
+.price {
+  color: $foreground_color !important;
 }
