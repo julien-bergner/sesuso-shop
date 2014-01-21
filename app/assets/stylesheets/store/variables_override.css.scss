@@ -51,6 +51,9 @@ $link_text_color: #d3770a;
 }
 
 a {
+  .info {
+    min-height: 50px;
+  }
   color: #d3770a;
 }
 
@@ -72,6 +75,7 @@ body {
   color: #d3770a !important;
 }
 
-.price {
+.price, .subtaxon-title {
   color: $foreground_color !important;
 }
+
