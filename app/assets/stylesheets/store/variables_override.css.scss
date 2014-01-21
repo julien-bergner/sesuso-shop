@@ -39,7 +39,7 @@ $link_text_color: #d3770a;
   background-color: $layout_background_color !important;
 }
 
-.show-product-number-field, .show-product-add-to-cart-button {
+.show-product-number-field, .show-product-add-to-cart-button, .button {
   background-color: $foreground_color !important;
   border-color: lighten($foreground_color, 30) !important;
   color: $background_color !important;
@@ -68,9 +68,9 @@ body {
   color: #d3770a !important;
 }
 
-#products .product-image {
-  min-height: 170px !important;
-}
+//#products .product-image {
+//  min-height: 170px !important;
+//}
 
 #products .product-image a {
   padding: 10px !important;
@@ -85,7 +85,11 @@ body {
   color: #d3770a !important;
 }
 
-.price, .subtaxon-title {
+.price {
   color: $foreground_color !important;
+}
+
+.subtaxon-title .breadcrumbs {
+  color: $foreground_color !important;;
 }
 
