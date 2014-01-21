@@ -12,7 +12,7 @@ $body_text_color: #d3770a;
 $link_text_color: #d3770a;
 
 .product-image {
-  background-color: #faf0e6 !important;
+  background-color: inherit !important;
   a {
     -webkit-border-radius: 0px !important;
     -moz-border-radius: 0px !important;
@@ -77,6 +77,7 @@ body {
 }
 
 .price, .subtaxon-title {
+  background-color: $foreground_color !important;
   color: $foreground_color !important;
 }
 
