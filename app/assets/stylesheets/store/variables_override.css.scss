@@ -51,10 +51,11 @@ $link_text_color: #d3770a;
 }
 
 a {
-  .info {
-    min-height: 50px;
-  }
   color: #d3770a;
+}
+
+a.info {
+  min-height: 50px;
 }
 
 body {
