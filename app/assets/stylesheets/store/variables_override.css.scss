@@ -106,3 +106,8 @@ p.field {
   background-color: $background_color;
 }
 
+.progress-steps .completed-first:hover,
+.shipment thead {
+  background-color: lighten($foreground_color, 30) !important;
+}
+
