@@ -39,10 +39,10 @@ $link_text_color: #d3770a;
   background-color: $layout_background_color !important;
 }
 
-.show-product-number-field, .show-product-add-to-cart-button, button {
-  background-color: $foreground_color !important;
-  border-color: lighten($foreground_color, 30) !important;
-  color: $background_color !important;
+.show-product-number-field, .show-product-add-to-cart-button, button, .button {
+  background-color: $foreground_color;
+  border-color: lighten($foreground_color, 30);
+  color: $background_color;
 }
 
 #main-image, #main-image img {
