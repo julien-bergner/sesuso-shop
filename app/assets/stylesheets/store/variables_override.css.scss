@@ -42,7 +42,9 @@ $link_text_color: #d3770a;
 }
 
 .slider-number-field, .slider-add-to-cart-button {
-  background-color: $layout_background_color !important;
+  background-color: $background_color !important;
+  border-color: darken($foreground_color, 30) !important;
+  color: $foreground_color !important;
 }
 
 #main-image, #main-image img {
@@ -74,8 +76,7 @@ body {
 }
 
 #products .product-image a {
-  padding: 0px !important;
-  //min-height: 150px !important;
+  padding: 10px 10px 5px 10px !important;
 }
 
 #featured-products .product-image a {
