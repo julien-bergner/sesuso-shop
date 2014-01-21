@@ -41,7 +41,7 @@ $link_text_color: #d3770a;
   color: $layout_background_color !important;
 }
 
-.slider-number-field, .slider-add-to-cart-button {
+.slider-number-field, .slider-add-to-cart-button, input {
   background-color: $background_color !important;
   border-color: lighten($foreground_color, 30) !important;
   color: $foreground_color !important;
@@ -65,7 +65,7 @@ body {
   color: #d3770a !important;
 }
 
-.featured-h3 {
+.featured-h3, .stock-location, .stock-shipping-method-title {
   background-color: #faf0e6 !important;
   color: #d3770a !important;
 }
@@ -87,7 +87,7 @@ body {
   color: #d3770a !important;
 }
 
-.price,.cart-item-price, #subtotal {
+.price, .cart-item-price, #subtotal h5. .rate-cost, strong {
   color: $foreground_color !important;
 }
 
@@ -100,5 +100,9 @@ body {
     color: $background_color !important;
   }
 
+}
+
+p.field {
+  background-color: $background_color;
 }
 
