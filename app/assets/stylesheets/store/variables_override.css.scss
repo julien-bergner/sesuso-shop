@@ -119,3 +119,7 @@ p.field {
 #featured-products .bx-wrapper {
   max-width: 970px !important;
 }
+
+table tfoot tr.odd {
+  background-color: lighten($background_color, 30) !important;
+}
