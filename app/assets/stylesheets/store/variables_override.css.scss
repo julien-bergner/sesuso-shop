@@ -1,15 +1,15 @@
 $foreground_color: #d3770a;
 $background_color: #faf0e6;
 
-$c_green: #d3770a;
-$c_red: #e45353;
-$c_blue: #d3770a;
-$c_orange: #d3770a;
+$c_green: $foreground_color;
+$c_red: $foreground_color;
+$c_blue: $foreground_color;
+$c_orange: $foreground_color;
 
-$layout_background_color: #faf0e6;
-$title_text_color: #d3770a;
-$body_text_color: #d3770a;
-$link_text_color: #d3770a;
+$layout_background_color: $background_color;
+$title_text_color: $foreground_color;
+$body_text_color: $foreground_color;
+$link_text_color: $foreground_color;
 
 .product-image {
   background-color: inherit !important;
@@ -49,11 +49,11 @@ $link_text_color: #d3770a;
 
 #main-image, #main-image img {
   border-radius: 0px !important;
-  background-color: $layout_background_color !important;
+  background-color: $background_color !important;
 }
 
 a {
-  color: #d3770a;
+  color: $foreground_color;
 }
 
 a.info {
@@ -61,13 +61,13 @@ a.info {
 }
 
 body {
-  background-color: #faf0e6 !important;
-  color: #d3770a !important;
+  background-color: $background_color !important;
+  color: $foreground_color !important;
 }
 
 .featured-h3, .stock-location, .stock-shipping-method-title {
   background-color: #faf0e6 !important;
-  color: #d3770a !important;
+  color: $foreground_color !important;
 }
 
 #products .product-image {
@@ -84,7 +84,7 @@ body {
 }
 
 .text-color {
-  color: #d3770a !important;
+  color: $foreground_color !important;
 }
 
 .price, .cart-item-price, #subtotal h5, .rate-cost, strong, legend {
