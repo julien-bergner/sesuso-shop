@@ -107,11 +107,12 @@ p.field {
 }
 
 .progress-steps .completed-first:hover,
+.progress-steps .completed:hover,
 .shipment thead {
   background-color: lighten($foreground_color, 30) !important;
 }
 
-.ui-button-text:hover {
+.ui-state-hover {
   border-color: $foreground_color !important;
 }
 
