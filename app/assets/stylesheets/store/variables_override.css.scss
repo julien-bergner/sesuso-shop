@@ -116,7 +116,6 @@ p.field {
   border-color: $foreground_color !important;
 }
 
-.bx-wrapper {
-  min-height: 325px;
+#featured-products .bx-wrapper {
+  max-width: 970px !important;
 }
-
