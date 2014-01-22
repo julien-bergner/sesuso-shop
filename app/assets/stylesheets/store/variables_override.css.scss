@@ -121,5 +121,5 @@ p.field {
 }
 
 table tfoot tr.odd {
-  background-color: lighten($background_color, 30) !important;
+  background-color: $background_color !important;
 }
