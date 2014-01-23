@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115003247) do
+ActiveRecord::Schema.define(version: 20140123010107) do
 
   create_table "spree_activator_translations", force: true do |t|
     t.integer  "spree_activator_id"
@@ -178,6 +178,17 @@ ActiveRecord::Schema.define(version: 20140115003247) do
   add_index "spree_inventory_units", ["order_id"], name: "index_inventory_units_on_order_id"
   add_index "spree_inventory_units", ["shipment_id"], name: "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], name: "index_inventory_units_on_variant_id"
+
+  create_table "spree_invoices", force: true do |t|
+    t.integer  "counter",        default: 0
+    t.string   "invoice_number"
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_invoices", ["invoice_number"], name: "index_spree_invoices_on_invoice_number"
 
   create_table "spree_line_items", force: true do |t|
     t.integer  "variant_id"
