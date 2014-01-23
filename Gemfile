@@ -56,4 +56,7 @@ gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-1-stable'
 gem 'spree_paypal_express', :github => "radar/better_spree_paypal_express", :branch => "2-1-stable"
 gem 'spree_bank_transfer', github: 'pampie/spree_bank_transfer', branch: '2-1-stable'
 
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+
 gem 'spree_invoice', github: 'julien-bergner/spree_invoice_generator', branch: 'master'
