@@ -13,6 +13,7 @@
 
       <div id="identity">
 
+        <div id="sender">Avitall Gerstetter, Helmholtzstraße 5, 12459 Berlin</div>
         <div id="address">
         <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %><br/>
         <%= "#{@order.ship_address.address1}" %><br/>
@@ -32,13 +33,13 @@
 
         <table id="meta">
           <tr>
-            <td class="meta-head">Rechnungsnummer</td>
-            <td><div><%= @order.number %></div></td>
+            <td class="meta-head blank-right">Rechnungsnummer:</td>
+            <td class="blank-left"><div><%= @order.number %></div></td>
           </tr>
           <tr>
 
-            <td class="meta-head">Rechnungsdatum</td>
-            <td><div id="date"><%= @order.created_at.to_date %></div></td>
+            <td class="meta-head blank-right">Rechnungsdatum:</td>
+            <td class="blank-left"><div id="date"><%= @order.created_at.to_date %></div></td>
           </tr>
 
         </table>
@@ -75,6 +76,8 @@
 
       <% end %>
 
+      <tr><td colspan="5" class="blank">&nbsp;</td></tr>
+
 
         <tr>
           <td colspan="2" class="blank"> </td>
@@ -96,8 +99,8 @@
 
           <tr>
             <td colspan="2" class="blank"> </td>
-            <td colspan="2" class="total-line">Gesamtsumme:</td>
-            <td class="total-line"><%= Spree::Money.new(@order.total, { currency: @order.currency }) %></td>
+            <td colspan="2" class="total-line right-blank">Gesamtsumme:</td>
+            <td class="total-line left-blank"><%= Spree::Money.new(@order.total, { currency: @order.currency }) %></td>
           </tr>
 
 
