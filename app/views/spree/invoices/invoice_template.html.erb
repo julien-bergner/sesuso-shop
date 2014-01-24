@@ -1,19 +1,110 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= wicked_pdf_stylesheet_link_tag("invoice.css") %>
+
 </head>
 <body>
-	<div id="wrapper">
-		<div id="header">
-			<%= wicked_pdf_image_tag(SpreeInvoice.invoice_seller_logo) %>
-		</div>
-		<div id="content">
-			<%= SpreeInvoice.invoice_seller_details %><br />
-			<%= @order.id %>
-		</div>
-	</div>
+
+    <div id="page-wrap">
+
+      <div id="identity">
+
+        <div id="address">
+        <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %><br/>
+        <%= "#{@order.ship_address.address1}" %><br/>
+        <%= "#{@order.ship_address.zipcode} #{@order.ship_address.city}" %><br/>
+        </div>
+
+        <div id="logo">
+          <%= image_tag("store/logo.png") %>
+        </div>
+
+      </div>
+
+      <div style="clear:both"></div>
+
+      <div id="middle">
+        <div id="subject">Rechnung</div>
+
+        <table id="meta">
+          <tr>
+            <td class="meta-head">Rechnungsnummer</td>
+            <td><div><%= @order.number %></div></td>
+          </tr>
+          <tr>
+
+            <td class="meta-head">Rechnungsdatum</td>
+            <td><div id="date"><%= @order.created_at.to_date %></div></td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <% if @order.line_items.exists? %>
+          <table id="items">
+
+
+            <thead>
+            <th colspan="2">Name</th>
+            <th>Einzelpreis</th>
+            <th>Anzahl</th>
+            <th>Gesamt</th>
+            </thead>
+
+            <tbody>
+            <% @order.line_items.each do |item| %>
+
+                <tr class="item-row">
+                  <td><%= mini_image(item.variant) %></td>
+                  <td>
+                    <%= item.variant.product.name %><br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+                  </td>
+                  <td><%= item.single_money.to_html %></td>
+                  <td>
+                    <%= item.quantity %>
+                  </td>
+                  <td class="line-item-total align-center"><%= line_item_shipment_price(item, item.quantity) %></td>
+                 </tr>
+            <% end %>
+            </tbody>
+
+      <% end %>
+
+
+        <tr>
+          <td colspan="2" class="blank"> </td>
+          <td colspan="2" class="summary-line">Zwischensumme:</td>
+          <td class="summary-line"><%= Spree::Money.new(@order.item_total, { currency: @order.currency }) %></td>
+        </tr>
+
+          <tr>
+            <td colspan="2" class="blank"> </td>
+            <td colspan="2" class="summary-line">enthaltene Mwst:</td>
+            <td class="summary-line"><%= Spree::Money.new(@order.tax_total, { currency: @order.currency }) %></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="blank"> </td>
+            <td colspan="2" class="summary-line">Versandkosten:</td>
+            <td class="summary-line"><%= Spree::Money.new(@order.adjustment_total, { currency: @order.currency }) %></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="blank"> </td>
+            <td colspan="2" class="total-line">Gesamtsumme:</td>
+            <td class="total-line"><%= Spree::Money.new(@order.total, { currency: @order.currency }) %></td>
+          </tr>
+
+
+
+
+      </table>
+
+    </div>
 </body>
 </html>
