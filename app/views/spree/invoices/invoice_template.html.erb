@@ -60,7 +60,7 @@
             <% @order.line_items.each do |item| %>
 
                 <tr class="item-row">
-                  <td><%= mini_image(item.variant) %></td>
+                  <td></td>
                   <td>
                     <%= item.variant.product.name %><br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
                   </td>
