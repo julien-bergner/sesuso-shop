@@ -68,7 +68,7 @@
                   <td>
                     <%= item.quantity %>
                   </td>
-                  <td class="line-item-total align-center"><%= line_item_shipment_price(item, item.quantity) %></td>
+                  <td class="line-item-total align-center"><%= Spree::Money.new(item.price * item.quantity, { currency: @order.currency }) %></td>
                  </tr>
             <% end %>
             </tbody>
