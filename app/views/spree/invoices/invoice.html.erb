@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <%= wicked_pdf_stylesheet_link_tag("invoice") %>
+
+</head>
+<body>
+
+<hr id="faltmarke1">
+<hr id="faltmarke2">
+
+<div id="logo">
+  <%= wicked_pdf_image_tag("store/logo.png") %>
+</div>
+
+<div id="anschriftenfeld">
+
+  <div id="anschriftenfeld-inner">
+
+    <div id="sender">Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin</div>
+    <div id="address">
+      <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
+      <br/>
+      <%= "#{@order.ship_address.address1}" %>
+      <br/>
+      <%= "#{@order.ship_address.zipcode} #{@order.ship_address.city}" %>
+      <br/>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="bezugszeichenzeile">
+  <table class="blank-table">
+    <!--<tr><td>Telefon: 030 / 123456</td></tr>-->
+    <!--<tr><td>Fax: 030 / 123456</td></tr>-->
+    <tr>
+      <td>E-Mail:</td>
+      <td>&nbsp;</td>
+      <td>shop@avitall.de</td>
+    </tr>
+    <tr>
+      <td>Web:</td>
+      <td>&nbsp;</td>
+      <td>shop.avitall.de</td>
+    </tr>
+  </table>
+  <br/>
+  <table class="invoice-data-table">
+    <tr>
+      <td class="blank-right">Rechnungsnummer:</td>
+      <td>&nbsp;</td>
+      <td class="blank-left">
+        <div class="centered"><%= @order.number %></div>
+      </td>
+    </tr>
+    <tr>
+
+      <td class="blank-right">Rechnungsdatum:</td>
+      <td>&nbsp;</td>
+      <td class="blank-left">
+        <div class="centered"><%= @order.created_at.to_date.strftime("%d.%m.%Y") %></div>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+<div id="textfield">
+  <p class="subject">Rechnung</p>
+
+
+  <% if @order.line_items.exists? %>
+      <table id="items">
+
+
+        <thead>
+        <th colspan="2">Name</th>
+        <th>Einzelpreis</th>
+        <th>Anzahl</th>
+        <th>Gesamt</th>
+        </thead>
+
+        <tbody>
+        <% @order.line_items.each do |item| %>
+
+            <tr class="item-row">
+              <td></td>
+              <td>
+                <%= item.variant.product.name %>
+                <br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+              </td>
+              <td><%= item.single_money.to_html %></td>
+              <td>
+                <%= item.quantity %>
+              </td>
+              <td class="line-item-total align-center"><%= Spree::Money.new(item.price * item.quantity, {currency: @order.currency}) %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+  <% end %>
+
+  <tr>
+    <td colspan="5" class="blank">&nbsp;</td>
+  </tr>
+
+
+  <tr class="summary-line">
+    <td colspan="2" class="blank"></td>
+    <td colspan="2" class="summary-right-buttom-clear">Zwischensumme:</td>
+    <td class="summary-right-buttom-clear summary-left-clear"><%= Spree::Money.new(@order.item_total, {currency: @order.currency}) %></td>
+  </tr>
+
+  <tr class="summary-line">
+    <td colspan="2" class="blank"></td>
+    <td colspan="2" class="summary-right-buttom-clear summary-top-clear">enthaltene Mwst:</td>
+    <td class="summary-right-buttom-clear summary-left-top-clear"><%= Spree::Money.new(@order.tax_total, {currency: @order.currency}) %></td>
+  </tr>
+
+  <tr class="summary-line">
+    <td colspan="2" class="blank"></td>
+    <td colspan="2" class="summary-right-buttom-clear summary-top-clear">Versandkosten:</td>
+    <td class="summary-right-buttom-clear summary-left-top-clear"><%= Spree::Money.new(@order.adjustment_total, {currency: @order.currency}) %></td>
+  </tr>
+
+  <tr class="summary-line">
+    <td colspan="2" class="blank"></td>
+    <td colspan="2" class="total-line summary-right-clear">Gesamtsumme:</td>
+    <td class="total-line summary-left-clear"><%= Spree::Money.new(@order.total, {currency: @order.currency}) %></td>
+  </tr>
+
+  </table>
+  <p class="payment-notice">Wir haben Ihre Zahlung in Höhe
+    von <%= Spree::Money.new(@order.total, {currency: @order.currency}) %> erhalten.</p>
+  <br/>
+  <br/>
+  <hr>
+  <p class="firmenangaben">
+    Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin<br/>
+    E-Mail: shop@avitall.de &#x007C; Web: shop.avitall.de
+  </p>
+</div>
+
+</body>
+</html>
