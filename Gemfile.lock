@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/julien-bergner/spree_invoice_generator.git
-  revision: 0f5862dc7b672ebfb190fb6c23b4a39fbe87a545
+  revision: f8555565ec10a1dfa49c537e2eab53f1eb654dc0
   branch: master
   specs:
     spree_invoice (1.2.0)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: d4c3954adb78a25a05f49d09b2c0fc926897dc81
+  revision: ffda7917903a147f1553b01a1724a26c6dde55d9
   branch: 2-1-stable
   specs:
     spree (2.1.4)
@@ -78,7 +78,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_fancy.git
-  revision: f333f990025bd73cda01db5ab2d4ee51fcd76d24
+  revision: d6b6cf03b1f6dd3f47dbfd14564ebacd6e324bb2
   branch: 2-1-stable
   specs:
     spree_fancy (2.1.0)
@@ -89,7 +89,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: 77d5520b1948eedd240aac3018a7227b6f0cfbf7
+  revision: 2398a7064abe1fa9c97bbaa5942d0d4008920303
   branch: 2-1-stable
   specs:
     spree_i18n (3.0.0)
@@ -193,7 +193,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.3)
+    coffee-script-source (1.7.0)
     colorize (0.6.0)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -216,7 +216,7 @@ GEM
       devise (>= 2.1.0)
     erubis (2.7.0)
     execjs (2.0.2)
-    ffaker (1.22.1)
+    ffaker (1.23.0)
     fssm (0.2.10)
     globalize (4.0.0)
       activemodel (>= 4.0.0, < 5)
@@ -255,7 +255,7 @@ GEM
       monetize (~> 0.1.3)
     multi_json (1.8.4)
     multi_xml (0.5.5)
-    mysql2 (0.3.14)
+    mysql2 (0.3.15)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -275,7 +275,7 @@ GEM
       mime-types
     paranoia (2.0.2)
       activerecord (~> 4.0)
-    passenger (4.0.35)
+    passenger (4.0.37)
       daemon_controller (>= 1.1.0)
       rack
       rake (>= 0.8.1)
@@ -316,7 +316,7 @@ GEM
       json (~> 1.4)
     rvm-capistrano (1.4.1)
       capistrano (>= 2.0.0)
-    sass (3.2.13)
+    sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
