@@ -5,7 +5,7 @@ module Spree
 		def initialize(user)
 		  user ||= User.new
 
-      if user.respond_to?(:has_spree_role?) && user.has_spree_role?('Shop-Manager')
+      if user.respond_to?(:has_spree_role?) && user.has_spree_role?('shop_manager')
 
         can [:admin, :manage], Order
         can [:admin, :manage], Adjustment
