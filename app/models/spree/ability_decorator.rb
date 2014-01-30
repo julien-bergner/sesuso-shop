@@ -13,9 +13,8 @@ module Spree
         can [:admin, :manage], Shipment
         can [:admin, :manage], ReturnAuthorization
 
-        #can [:admin, :index, :show]
-        can :sales_total, :reports
-		    
+        can [:admin, :index, :show], Reports
+
       end
 
 		end
