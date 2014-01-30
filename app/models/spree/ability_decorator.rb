@@ -13,7 +13,7 @@ module Spree
         can [:admin, :manage], Shipment
         can [:admin, :manage], ReturnAuthorization
 
-        can [:admin, :show], Spree::Admin::ReportsController
+        can [:admin, :manage], Spree::Admin::ReportsController
 
       end
 
