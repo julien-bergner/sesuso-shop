@@ -519,7 +519,7 @@ de:
         token: Token
       jirafe_settings_updated: Jirafe Einstellungen wurden aktualisiert.
     date: Datum
-    date_completed: Abschlußdatum
+    date_completed: Datum
     date_picker:
       first_day: 0
       format: ! '%d.%m.%Y'
