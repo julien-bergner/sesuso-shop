@@ -423,7 +423,8 @@ de:
     back_to_users_list: Zurück zur Benutzerliste
     back_to_zones_list: Zurück zur Zonen Liste
     backorderable: Nachbestellbar
-    backorders_allowed:
+    backorders_allowed: Nachbestellungen zulassen
+    backordered:  nachzubestellen
     balance_due: Soll
     bill_address: Rechnungsadresse
     billing: Rechnung
@@ -658,6 +659,7 @@ de:
         gte: größer oder gleich als
     items_cannot_be_shipped: Wir können die ausgewählten Artikel nicht an Ihre Lieferadresse schicken. Bitte wählen Sie eine andere Lieferadresse.
     jirafe: Jirafe
+    key: Key
     landing_page_rule:
       path: Path
     last_name: Nachname
