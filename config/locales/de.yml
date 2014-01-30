@@ -387,6 +387,8 @@ de:
     analytics_desc_list_4: Komplett kostenlos!
     analytics_trackers: Zugriffsstatistik Tracker
     and: und
+    api:
+      key: Key
     are_you_sure: Sind Sie sicher
     are_you_sure_delete: Sind sie sicher, dass Sie diesen Eintrag löschen möchten?
     associated_adjustment_closed: Die verknüpfte Anpassung ist geschlossen und wird nicht neu berechnet. Möchten Sie die Anpassung öffnen?
@@ -659,7 +661,6 @@ de:
         gte: größer oder gleich als
     items_cannot_be_shipped: Wir können die ausgewählten Artikel nicht an Ihre Lieferadresse schicken. Bitte wählen Sie eine andere Lieferadresse.
     jirafe: Jirafe
-    key: Key
     landing_page_rule:
       path: Path
     last_name: Nachname
