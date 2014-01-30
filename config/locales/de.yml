@@ -388,7 +388,7 @@ de:
     analytics_trackers: Zugriffsstatistik Tracker
     and: und
     api:
-      key: Key
+      key: API-Key
     are_you_sure: Sind Sie sicher
     are_you_sure_delete: Sind sie sicher, dass Sie diesen Eintrag löschen möchten?
     associated_adjustment_closed: Die verknüpfte Anpassung ist geschlossen und wird nicht neu berechnet. Möchten Sie die Anpassung öffnen?
