@@ -123,3 +123,35 @@ p.field {
 table tbody tr.odd {
   background-color: $background_color !important;
 }
+
+#order_summary {
+  h1, h2, h3, h4, h5, h6 {
+    color: $foreground_color !important;
+    border-bottom: 1px solid lighten($foreground_color, 30) !important;
+  }
+  #order-total {
+    color: $foreground_color !important;
+  }
+  #subtotal-row {
+    color: $foreground_color !important;
+  }
+  .total span {
+    color: $foreground_color !important;
+  }
+  .price span {
+    color: $foreground_color !important;
+  }
+  hr {
+    background-color: lighten($foreground_color, 30) !important;
+    color: lighten($foreground_color, 30) !important;
+    border: 0 !important;
+    height: 0px !important;
+  }
+  table tbody tr {
+    border-bottom: 1px solid lighten($foreground_color, 30) !important;
+  }
+
+  [data-hook="order_item_qty"] {
+    text-align: center;
+  }
+}
