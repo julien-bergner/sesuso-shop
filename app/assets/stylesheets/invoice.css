@@ -14,6 +14,21 @@ body {
 
 #items td, th { border: 1px solid #000; padding: 5px; }
 
+#etikettenfeld {
+    top: 6mm;
+    left: 129mm;
+    position: inherit;
+    width: 75mm;
+    height: 50mm;
+
+}
+
+#etikettenfeld-inner {
+    top: 10mm;
+    left: 2mm;
+    position: inherit;
+}
+
 #anschriftenfeld {
     top: 45mm;
     left: 20mm;
@@ -29,7 +44,7 @@ body {
 }
 
 #bezugszeichenzeile {
-    top: 50mm;
+    top: 60mm;
     left: 120mm; /* 125mm */
     position: inherit;
     width: 70mm; /* DIN: 75mm */
@@ -51,7 +66,7 @@ body {
 }
 
 #logo {
-    text-align: center;
+    margin-left: 60mm;
     margin-top: 15mm;
 }
 

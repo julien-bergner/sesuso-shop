@@ -16,6 +16,23 @@
   <%= wicked_pdf_image_tag("store/logo.png") %>
 </div>
 
+<div id="etikettenfeld">
+
+  <div id="etikettenfeld-inner">
+
+    <div id="sender">Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin</div>
+    <div id="address">
+      <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
+      <br/>
+      <%= "#{@order.ship_address.address1}" %>
+      <br/>
+      <%= "#{@order.ship_address.zipcode} #{@order.ship_address.city}" %>
+      <br/>
+    </div>
+  </div>
+
+</div>
+
 <div id="anschriftenfeld">
 
   <div id="anschriftenfeld-inner">
