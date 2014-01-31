@@ -14,6 +14,7 @@ module Spree
         can [:admin, :manage], ReturnAuthorization
 
         can [:admin, :manage], Spree::Admin::ReportsController
+        can [:admin, :manage], Spree::InvoiceController
 
       end
 
