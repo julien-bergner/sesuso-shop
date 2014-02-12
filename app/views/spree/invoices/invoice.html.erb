@@ -20,8 +20,9 @@
 
   <div id="etikettenfeld-inner">
 
-    <div id="sender">Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin</div>
+    <div id="sender">Sesuso Services &#x007C; Reinickendorfer Strasse 109 &#x007C; 13347 Berlin</div>
     <div id="address">
+      WARENSENDUNG<br/>
       <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
       <br/>
       <%= "#{@order.ship_address.address1}" %>
@@ -37,7 +38,7 @@
 
   <div id="anschriftenfeld-inner">
 
-    <div id="sender">Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin</div>
+    <div id="sender">Sesuso Services &#x007C; Reinickendorfer Strasse 109 &#x007C; 13347 Berlin</div>
     <div id="address">
       <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
       <br/>
@@ -64,6 +65,11 @@
       <td>Web:</td>
       <td>&nbsp;</td>
       <td>shop.avitall.de</td>
+    </tr>
+    <tr>
+      <td>Telefon:</td>
+      <td>&nbsp;</td>
+      <td>030&nbsp;/&nbsp;42&nbsp;09&nbsp;55&nbsp;38</td>
     </tr>
   </table>
   <br/>
@@ -158,8 +164,13 @@
   <br/>
   <hr>
   <p class="firmenangaben">
+    Verkauf im Namen und auf Rechnung von: <br>
     Avitall-Shop &#x007C; Avitall Gerstetter &#x007C; Helmholtzstraße 5 &#x007C; 12459 Berlin<br/>
-    E-Mail: shop@avitall.de &#x007C; Web: shop.avitall.de
+    Steuernummer: 36/306/62198 &#x007C; UST-ID: DE814274865<br>
+    <br>
+    Der Avitall-Shop wird betrieben von: <br>
+    Sesuso Services &#x007C; Julien Bergner &#x007C; Reinickendorfer Strasse 109 &#x007C; 13347 Berlin<br/>
+
   </p>
 </div>
 
