@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-AvitallShop::Application.config.session_store :cookie_store, key: '_avitall-shop_session'
+SesusoShop::Application.config.session_store :cookie_store, key: '_sesuso_shop_session'

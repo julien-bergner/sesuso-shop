@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-AvitallShop::Application.load_tasks
+SesusoShop::Application.load_tasks

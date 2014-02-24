@@ -12,7 +12,7 @@ set :user, 'avitall'
 
 # a name for your app, [a-z0-9] should be safe, will be used for your gemset,
 # databases, directories, etc.
-set :application, 'AvitallShop'
+set :application, 'SesusoShop'
 
 # the repo where your code is hosted
 set :shell, '/usr/bin/bash'
@@ -34,4 +34,4 @@ set :repository, 'git@github.com:julien-bergner/avitall-shop.git'
 # By default, Ruby Enterprise Edition 1.8.7 is used for Uberspace. If you
 # prefer Ruby 1.9 or any other version, please refer to the RVM documentation
 # at https://rvm.io/integration/capistrano/ and set this variable.
-set :rvm_ruby_string, 'ruby-2.0.0-p353@AvitallShop'
+set :rvm_ruby_string, 'ruby-2.0.0-p353@SesusoShop'

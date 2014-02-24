@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-AvitallShop::Application.config.secret_key_base = '0351655b167db1e8a398b95ea438c0a5a08cd9798ef7a0b038cdf730a0eaa206f1a2b94ef4454a66865426f72e6a5cd05bae74acbfb2935e61ed5d17d77fc116'
+SesusoShop::Application.config.secret_key_base = '0351655b167db1e8a398b95ea438c0a5a08cd9798ef7a0b038cdf730a0eaa206f1a2b94ef4454a66865426f72e6a5cd05bae74acbfb2935e61ed5d17d77fc116'
