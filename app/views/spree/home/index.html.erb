@@ -5,7 +5,7 @@
 <div id="welcome-message">
   <div class="container">
     <h1>
-      Willkommen im Avitall-Shop. 
+      <%= "#{t('sesuso.welcome_to')} #{Spree::Config[:site_name]}" %>.
     </h1>
   </div>
 </div>
@@ -13,7 +13,7 @@
 <div class="container">
   <% if @featured_products %>
     <div id="featured-products" class="row">
-      <h3 class="featured-h3">Beliebte Produkte</h3>
+      <h3 class="featured-h3"><%= t('sesuso.featured_products') %></h3>
       <hr>
       <ul class="carousel">
         <% @featured_products.each do |product| %>
