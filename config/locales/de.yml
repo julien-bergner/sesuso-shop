@@ -1152,4 +1152,11 @@ de:
     welcome_to: Willkommen im
     featured_products: Beliebte Produkte
     customer_name: Kundenname
+    pay_with_paypal: Bitte klicken Sie auf das Logo, um mit PayPal zu bezahlen:
+    pay_with_bank_transfer: Bitte überweisen Sie auf folgendes Konto:
+    account_owner: Kontoinhaber
+    account_number: Kontonummer
+    bank_code: Bankleitzahl
+    iban: IBAN
+    bic: BIC
 

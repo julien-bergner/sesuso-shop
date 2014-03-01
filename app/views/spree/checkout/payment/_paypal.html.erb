@@ -1,4 +1,4 @@
-<h3>Bitte klicken Sie auf das Logo, um mit PayPal zu bezahlen: </h3>
+<h3><%= t('sesuso.pay_with_paypal') %></h3>
 <br>
 <%= link_to(image_tag("store/paypal.gif"), paypal_express_url(:payment_method_id => payment_method.id), :method => :get, :id => "paypal_button") %>
 
