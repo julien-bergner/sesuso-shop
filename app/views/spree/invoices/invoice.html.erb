@@ -20,7 +20,7 @@
 
   <div id="etikettenfeld-inner">
 
-    <div id="sender"><%= t('sesuso.invoice.shop_operator_address_1') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_3') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_4') %></div>
+    <div id="sender"><%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %></div>
     <div id="address">
       <%= t('sesuso.invoice.postal_message') %><br/>
       <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
@@ -38,7 +38,7 @@
 
   <div id="anschriftenfeld-inner">
 
-    <div id="sender"><%= t('sesuso.invoice.shop_operator_address_1') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_3') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_4') %></div>
+    <div id="sender"><%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %></div>
     <div id="address">
       <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
       <br/>
@@ -59,17 +59,17 @@
     <tr>
       <td><%= t('sesuso.invoice.email_label') %></td>
       <td>&nbsp;</td>
-      <td><%= t('sesuso.invoice.email') %></td>
+      <td><%= Figaro.env.invoice_email %></td>
     </tr>
     <tr>
       <td><%= t('sesuso.invoice.url_label') %></td>
       <td>&nbsp;</td>
-      <td><%= t('sesuso.invoice.url') %></td>
+      <td><%= Figaro.env.invoice_url %></td>
     </tr>
     <tr>
       <td><%= t('sesuso.invoice.phone_label') %></td>
       <td>&nbsp;</td>
-      <td><%= t('sesuso.invoice.phone') %></td>
+      <td><%= Figaro.env.invoice_phone %></td>
     </tr>
   </table>
   <br/>
@@ -164,11 +164,11 @@
   <hr>
   <p class="firmenangaben">
     <%= t('sesuso.invoice.shop_owned_by') %><br>
-    <%= t('sesuso.invoice.shop_owner_address_1') %> &#x007C; <%= t('sesuso.invoice.shop_owner_address_2') %> &#x007C; <%= t('sesuso.invoice.shop_owner_address_3') %> &#x007C; <%= t('sesuso.invoice.shop_owner_address_4') %><br/>
-    <%= t('sesuso.invoice.vat_number_1_label') %> <%= t('sesuso.invoice.vat_number_1') %> &#x007C; <%= t('sesuso.invoice.vat_number_2_label') %> <%= t('sesuso.invoice.vat_number_2') %> <br>
+    <%= Figaro.env.shop_owner_address_1 %> &#x007C; <%= Figaro.env.shop_owner_address_2 %> &#x007C; <%= Figaro.env.shop_owner_address_3 %> &#x007C; <%= Figaro.env.shop_owner_address_4 %><br/>
+    <%= t('sesuso.invoice.vat_number_1_label') %> <%= Figaro.env.vat_number_1 %> &#x007C; <%= t('sesuso.invoice.vat_number_2_label') %> <%= Figaro.env.vat_number_2 %> <br>
     <br>
     <%= t('sesuso.invoice.shop_operated_by', shopname: Spree::Config[:site_name]) %><br>
-    <%= t('sesuso.invoice.shop_operator_address_1') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_2') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_3') %> &#x007C; <%= t('sesuso.invoice.shop_operator_address_4') %><br/>
+    <%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_2 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %><br/>
 
   </p>
 </div>

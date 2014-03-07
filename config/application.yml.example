@@ -3,3 +3,21 @@ account_number: Kontonummer
 bank_code: Bankleitzahl
 iban: IBAN
 bic: BIC
+
+# Invoice stuff
+shop_operator_address_1: Firmenname
+shop_operator_address_2: Personenname
+shop_operator_address_3: Strasse und Nr
+shop_operator_address_4: PLZ und Ort
+
+email: beispiel@beispiel.de
+url: www.beispiel.de
+phone: "030 / 12 34 56 78"
+
+shop_owner_address_1: Firmenname
+shop_owner_address_2: Personenname
+shop_owner_address_3: Strasse und Nr
+shop_owner_address_4: PLZ und Ort
+
+vat_number_1: "12/345/67890"
+vat_number_2: DE123456789
