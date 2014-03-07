@@ -1160,3 +1160,42 @@ de:
     iban: IBAN
     bic: BIC
 
+    invoice:
+      shop_operator_address_1: Firmenname
+      shop_operator_address_2: Personenname
+      shop_operator_address_3: Strasse und Nr
+      shop_operator_address_4: PLZ und Ort
+      postal_message: WARENSENDUNG
+      email_label: "E-Mail:"
+      email: beispiel@beispiel.de
+      url_label: "Web:"
+      url: www.beispiel.de
+      phone_label: "Telefon:"
+      phone: "030 / 12 34 56 78"
+      invoice_number: "Rechnungsnummer:"
+      invoice_date: "Rechnungsdatum:"
+      invoice: Rechnung
+      item_name: Name
+      price_per_item: Einzelpreis
+      item_amount: Anzahl
+      item_total: Gesamt
+      subtotal: "Zwischensumme:"
+      vat_included: "enthaltene Mwst:"
+      shipping_total: "Versandkosten:"
+      order_total: "Gesamtsumme:"
+      payment_received: "Wir haben Ihre Zahlung in Höhe von %{amount} erhalten."
+      shop_owned_by: "Verkauf im Namen und auf Rechnung von:"
+      shop_owner_address_1: Firmenname
+      shop_owner_address_2: Personenname
+      shop_owner_address_3: Strasse und Nr
+      shop_owner_address_4: PLZ und Ort
+      vat_number_1_label: "Steuernummer:"
+      vat_number_1: "12/345/67890"
+      vat_number_2_label: "UST-ID:"
+      vat_number_2: DE123456789
+      shop_operated_by: "Der %{shopname} wird betrieben von:"
+
+
+
+
+
