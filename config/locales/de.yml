@@ -1186,7 +1186,7 @@ de:
     please_pay: "Wenn Sie Banküberweisung als Zahlungsmethode ausgewählt haben, überweisen Sie bitte %{amount} auf folgendes Konto:"
     shipping_after_payment: Ihre Bestellung wird nach Zahlungseingang verschickt.
     paypal_note: Wenn Sie bereits per PayPal bezahlt haben, müssen Sie nichts weiter tun. Ihre Bestellung wird schnellstmöglich verschickt.
-    greetings: "Herzliche Grüße,"
+    greetings: "Mit freundlichen Grüßen,"
 
 
 
