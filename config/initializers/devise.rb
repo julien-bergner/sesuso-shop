@@ -1,1 +1,1 @@
-Devise.secret_key = "81c659abcde0197077816c2bbb64ca0399b6a29918ff1277a067adb25659330c8025a0d960d5921db47400bbc504373a2cb7492f1eeeb69f1f42032637f46d43"
+Devise.secret_key = Figaro.env.devise_secret_key

@@ -23,3 +23,4 @@ vat_number_1: "12/345/67890"
 vat_number_2: DE123456789
 
 secret_key_base: "1234"
+devise_secret_key: "1234"
