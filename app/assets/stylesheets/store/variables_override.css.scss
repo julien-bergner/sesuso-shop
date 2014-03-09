@@ -19,7 +19,7 @@ $link_text_color: $foreground_color;
     -ms-border-radius: 0px !important;
     -o-border-radius: 0px !important;
     border-radius: 0px !important;
-    background-color: #faf0e6 !important;
+    background-color: $background_color !important;
 
     img {
       -webkit-border-radius: 0px !important;
@@ -66,7 +66,7 @@ body {
 }
 
 .featured-h3, .stock-location, .stock-shipping-method-title {
-  background-color: #faf0e6 !important;
+  background-color: $background_color !important;
   color: $foreground_color !important;
 }
 
