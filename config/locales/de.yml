@@ -1160,27 +1160,27 @@ de:
     iban: IBAN
     bic: BIC
 
-    invoice:
-      postal_message: WARENSENDUNG
-      email_label: "E-Mail:"
-      url_label: "Web:"
-      phone_label: "Telefon:"
-      invoice_number: "Rechnungsnummer:"
-      invoice_date: "Rechnungsdatum:"
-      invoice: Rechnung
-      item_name: Name
-      price_per_item: Einzelpreis
-      item_amount: Anzahl
-      item_total: Gesamt
-      subtotal: "Zwischensumme:"
-      vat_included: "enthaltene Mwst:"
-      shipping_total: "Versandkosten:"
-      order_total: "Gesamtsumme:"
-      payment_received: "Wir haben Ihre Zahlung in Höhe von %{amount} erhalten."
-      shop_owned_by: "Verkauf im Namen und auf Rechnung von:"
-      vat_number_1_label: "Steuernummer:"
-      vat_number_2_label: "UST-ID:"
-      shop_operated_by: "Der %{shopname} wird betrieben von:"
+  invoice:
+    postal_message: WARENSENDUNG
+    email_label: "E-Mail:"
+    url_label: "Web:"
+    phone_label: "Telefon:"
+    invoice_number: "Rechnungsnummer:"
+    invoice_date: "Rechnungsdatum:"
+    invoice: Rechnung
+    item_name: Name
+    price_per_item: Einzelpreis
+    item_amount: Anzahl
+    item_total: Gesamt
+    subtotal: "Zwischensumme:"
+    vat_included: "enthaltene Mwst:"
+    shipping_total: "Versandkosten:"
+    order_total: "Gesamtsumme:"
+    payment_received: "Wir haben Ihre Zahlung in Höhe von %{amount} erhalten."
+    shop_owned_by: "Verkauf im Namen und auf Rechnung von:"
+    vat_number_1_label: "Steuernummer:"
+    vat_number_2_label: "UST-ID:"
+    shop_operated_by: "Der %{shopname} wird betrieben von:"
 
 
 

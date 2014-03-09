@@ -9,20 +9,20 @@
 </head>
 <body>
 
-<hr id="faltmarke1">
-<hr id="faltmarke2">
+<hr id="folding-mark-1">
+<hr id="folding-mark-2">
 
 <div id="logo">
-  <%= wicked_pdf_image_tag("store/logo.png") %>
+  <%= Spree::Config[:site_name]  %>
 </div>
 
-<div id="etikettenfeld">
+<div id="shipping-label-field">
 
-  <div id="etikettenfeld-inner">
+  <div id="shipping-label-field-inner">
 
     <div id="sender"><%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %></div>
     <div id="address">
-      <%= t('sesuso.invoice.postal_message') %><br/>
+      <%= t('invoice.postal_message') %><br/>
       <%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
       <br/>
       <%= "#{@order.ship_address.address1}" %>
@@ -34,9 +34,9 @@
 
 </div>
 
-<div id="anschriftenfeld">
+<div id="address-field">
 
-  <div id="anschriftenfeld-inner">
+  <div id="address-field-inner">
 
     <div id="sender"><%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %></div>
     <div id="address">
@@ -52,22 +52,20 @@
 
 </div>
 
-<div id="bezugszeichenzeile">
+<div id="shop-contact-details">
   <table class="blank-table">
-    <!--<tr><td>Telefon: 030 / 123456</td></tr>-->
-    <!--<tr><td>Fax: 030 / 123456</td></tr>-->
     <tr>
-      <td><%= t('sesuso.invoice.email_label') %></td>
+      <td><%= t('invoice.email_label') %></td>
       <td>&nbsp;</td>
       <td><%= Figaro.env.invoice_email %></td>
     </tr>
     <tr>
-      <td><%= t('sesuso.invoice.url_label') %></td>
+      <td><%= t('invoice.url_label') %></td>
       <td>&nbsp;</td>
       <td><%= Figaro.env.invoice_url %></td>
     </tr>
     <tr>
-      <td><%= t('sesuso.invoice.phone_label') %></td>
+      <td><%= t('invoice.phone_label') %></td>
       <td>&nbsp;</td>
       <td><%= Figaro.env.invoice_phone %></td>
     </tr>
@@ -75,7 +73,7 @@
   <br/>
   <table class="invoice-data-table">
     <tr>
-      <td class="blank-right"><%= t('sesuso.invoice.invoice_number') %></td>
+      <td class="blank-right"><%= t('invoice.invoice_number') %></td>
       <td>&nbsp;</td>
       <td class="blank-left">
         <div class="centered"><%= @order.number %></div>
@@ -83,7 +81,7 @@
     </tr>
     <tr>
 
-      <td class="blank-right"><%= t('sesuso.invoice.invoice_date') %></td>
+      <td class="blank-right"><%= t('invoice.invoice_date') %></td>
       <td>&nbsp;</td>
       <td class="blank-left">
         <div class="centered"><%= @order.created_at.to_date.strftime("%d.%m.%Y") %></div>
@@ -94,7 +92,7 @@
 </div>
 
 <div id="textfield">
-  <p class="subject"><%= t('sesuso.invoice.invoice') %></p>
+  <p class="subject"><%= t('invoice.invoice') %></p>
 
 
   <% if @order.line_items.exists? %>
@@ -102,10 +100,10 @@
 
 
         <thead>
-        <th colspan="2"><%= t('sesuso.invoice.item_name') %></th>
-        <th><%= t('sesuso.invoice.price_per_item') %></th>
-        <th><%= t('sesuso.invoice.item_amount') %></th>
-        <th><%= t('sesuso.invoice.item_total') %></th>
+        <th colspan="2"><%= t('invoice.item_name') %></th>
+        <th><%= t('invoice.price_per_item') %></th>
+        <th><%= t('invoice.item_amount') %></th>
+        <th><%= t('invoice.item_total') %></th>
         </thead>
 
         <tbody>
@@ -135,39 +133,39 @@
 
   <tr class="summary-line">
     <td colspan="2" class="blank"></td>
-    <td colspan="2" class="summary-right-buttom-clear"><%= t('sesuso.invoice.subtotal') %></td>
+    <td colspan="2" class="summary-right-buttom-clear"><%= t('invoice.subtotal') %></td>
     <td class="summary-right-buttom-clear summary-left-clear"><%= Spree::Money.new(@order.item_total, {currency: @order.currency}) %></td>
   </tr>
 
   <tr class="summary-line">
     <td colspan="2" class="blank"></td>
-    <td colspan="2" class="summary-right-buttom-clear summary-top-clear"><%= t('sesuso.invoice.vat_included') %></td>
+    <td colspan="2" class="summary-right-buttom-clear summary-top-clear"><%= t('invoice.vat_included') %></td>
     <td class="summary-right-buttom-clear summary-left-top-clear"><%= Spree::Money.new(@order.tax_total, {currency: @order.currency}) %></td>
   </tr>
 
   <tr class="summary-line">
     <td colspan="2" class="blank"></td>
-    <td colspan="2" class="summary-right-buttom-clear summary-top-clear"><%= t('sesuso.invoice.shipping_total') %></td>
+    <td colspan="2" class="summary-right-buttom-clear summary-top-clear"><%= t('invoice.shipping_total') %></td>
     <td class="summary-right-buttom-clear summary-left-top-clear"><%= Spree::Money.new(@order.adjustment_total, {currency: @order.currency}) %></td>
   </tr>
 
   <tr class="summary-line">
     <td colspan="2" class="blank"></td>
-    <td colspan="2" class="total-line summary-right-clear"><%= t('sesuso.invoice.order_total') %></td>
+    <td colspan="2" class="total-line summary-right-clear"><%= t('invoice.order_total') %></td>
     <td class="total-line summary-left-clear"><%= Spree::Money.new(@order.total, {currency: @order.currency}) %></td>
   </tr>
 
   </table>
-  <p class="payment-notice"><%= t('sesuso.invoice.payment_received', amount: Spree::Money.new(@order.total, {currency: @order.currency})) %></p>
+  <p class="payment-notice"><%= t('invoice.payment_received', amount: Spree::Money.new(@order.total, {currency: @order.currency})) %></p>
   <br/>
   <br/>
   <hr>
-  <p class="firmenangaben">
-    <%= t('sesuso.invoice.shop_owned_by') %><br>
+  <p class="company-details">
+    <%= t('invoice.shop_owned_by') %><br>
     <%= Figaro.env.shop_owner_address_1 %> &#x007C; <%= Figaro.env.shop_owner_address_2 %> &#x007C; <%= Figaro.env.shop_owner_address_3 %> &#x007C; <%= Figaro.env.shop_owner_address_4 %><br/>
-    <%= t('sesuso.invoice.vat_number_1_label') %> <%= Figaro.env.vat_number_1 %> &#x007C; <%= t('sesuso.invoice.vat_number_2_label') %> <%= Figaro.env.vat_number_2 %> <br>
+    <%= t('invoice.vat_number_1_label') %> <%= Figaro.env.vat_number_1 %> &#x007C; <%= t('invoice.vat_number_2_label') %> <%= Figaro.env.vat_number_2 %> <br>
     <br>
-    <%= t('sesuso.invoice.shop_operated_by', shopname: Spree::Config[:site_name]) %><br>
+    <%= t('invoice.shop_operated_by', shopname: Spree::Config[:site_name]) %><br>
     <%= Figaro.env.shop_operator_address_1 %> &#x007C; <%= Figaro.env.shop_operator_address_2 %> &#x007C; <%= Figaro.env.shop_operator_address_3 %> &#x007C; <%= Figaro.env.shop_operator_address_4 %><br/>
 
   </p>

@@ -14,22 +14,22 @@ body {
 
 #items td, th { border: 1px solid #000; padding: 5px; }
 
-#etikettenfeld {
+#shipping-label-field {
     top: 6mm;
-    left: 129mm;
+    left: 135mm;
     position: inherit;
     width: 75mm;
     height: 50mm;
 
 }
 
-#etikettenfeld-inner {
+#shipping-label-field-inner {
     top: 10mm;
     left: 2mm;
     position: inherit;
 }
 
-#anschriftenfeld {
+#address-field {
     top: 45mm;
     left: 20mm;
     position: inherit;
@@ -37,15 +37,15 @@ body {
     height: 45mm;
 }
 
-#anschriftenfeld-inner {
+#address-field-inner {
     top: 5mm;
     left: 5mm;
     position: inherit;
 }
 
-#bezugszeichenzeile {
+#shop-contact-details {
     top: 60mm;
-    left: 120mm; /* 125mm */
+    left: 120mm; /* DIN: 125mm */
     position: inherit;
     width: 70mm; /* DIN: 75mm */
     height: 40mm;
@@ -66,8 +66,9 @@ body {
 }
 
 #logo {
-    margin-left: 60mm;
+    margin-left: 25mm;
     margin-top: 15mm;
+    font-size: 200%;
 }
 
 .blank-table {
@@ -97,7 +98,7 @@ hr {
     height: 1px;
 }
 
-#faltmarke1 {
+#folding-mark-1 {
     top: 105mm;
     position: inherit;
     border: 0;
@@ -106,7 +107,7 @@ hr {
     width: 5mm;
 }
 
-#faltmarke2 {
+#folding-mark-2 {
     top: 210mm;
     position: inherit;
     border: 0;
@@ -115,7 +116,7 @@ hr {
     width: 5mm;
 }
 
-.firmenangaben {
+.company-details {
     text-align: center;
 }
 
