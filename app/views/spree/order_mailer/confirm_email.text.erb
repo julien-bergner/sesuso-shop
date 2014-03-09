@@ -17,16 +17,15 @@
 
 <%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %>
 
-Wenn Sie Banküberweisung als Zahlungsmethode ausgewählt haben, überweisen Sie bitte <%= @order.display_total %> auf folgendes Konto:
-Kontoinhaber: Avitall Shop 
-Kontonummer: 10 62 19 43 02
-Bankleitzahl: 100 500 00 (Berliner Sparkasse)
-Ihre Bestellung wird nach Zahlungseingang verschickt.
+<%= t('confirmation_mail.please_pay', amount: @order.display_total) %>
+<%= t('sesuso.account_owner') %>: <%= Figaro.env.account_owner %>
+<%= t('sesuso.account_number') %>: <%= Figaro.env.account_number %>
+<%= t('sesuso.bank_code') %>: <%= Figaro.env.bank_code %>
+<%= Spree.t('confirmation_mail.shipping_after_payment') %>
 
-Wenn Sie bereits per PayPal bezahlt haben, müssen Sie nichts weiter tun.
-Ihre Bestellung wird schnellstmöglich verschickt.
+<%= Spree.t('confirmation_mail.paypal_note') %>
 
 <%= Spree.t('order_mailer.confirm_email.thanks') %>
 
-Herzliche Grüße,
-Ihr Avitall-Shop
+<%= Spree.t('confirmation_mail.greetings') %>
+<%= Spree::Config[:site_name] %>

@@ -1182,6 +1182,12 @@ de:
     vat_number_2_label: "UST-ID:"
     shop_operated_by: "Der %{shopname} wird betrieben von:"
 
+  confirmation_mail:
+    please_pay: "Wenn Sie Banküberweisung als Zahlungsmethode ausgewählt haben, überweisen Sie bitte %{amount} auf folgendes Konto:"
+    shipping_after_payment: Ihre Bestellung wird nach Zahlungseingang verschickt.
+    paypal_note: Wenn Sie bereits per PayPal bezahlt haben, müssen Sie nichts weiter tun. Ihre Bestellung wird schnellstmöglich verschickt.
+    greetings: "Herzliche Grüße,"
+
 
 
 
