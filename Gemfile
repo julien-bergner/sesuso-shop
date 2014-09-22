@@ -62,3 +62,5 @@ gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
 
 gem 'spree_invoice', github: 'julien-bergner/spree_invoice_generator', branch: 'master'
+
+gem 'spree_german_market', :git => 'git://github.com/hefan/spree_german_market.git', :branch => '2-1-stable'

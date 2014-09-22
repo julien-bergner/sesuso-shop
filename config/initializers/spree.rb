@@ -18,3 +18,5 @@ end
 Spree.user_class = "Spree::LegacyUser"
 Spree::Config.set(logo: "store/logo.png")
 
+Spree::PermittedAttributes.address_attributes << :street_number
+
