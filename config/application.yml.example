@@ -1,3 +1,7 @@
+# General stuff
+site_name: Sesuso Shop
+
+# Bank account stuff
 account_owner: Kontoinhaber
 account_number: Kontonummer
 bank_code: Bankleitzahl
